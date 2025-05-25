@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* @theme {
+  --font-montserrat: "Montserrat", "sans-serif";
+} */
+
+/* @theme {
+  --font-weight-thin: 100;
+  --font-weight-extraLight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+} */
+
+@theme {
+  --color-yellow: #ffc700;
+  --color-blue: #1b263b;
+}
