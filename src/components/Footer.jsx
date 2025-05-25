@@ -4,7 +4,7 @@ import { Instagram, Twitter, Facebook } from 'lucide-react'
 const Footer = () => {
   return (
     <footer className='bg-blue text-white text-center py-6'>
-        <h1>
+        <h1 className='font-bold text-lg'>
             Let's build something great together
         </h1>
         <p className=''>&copy; 2025 Faposs West Africa Ltd.</p>

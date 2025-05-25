@@ -8,7 +8,7 @@ const App = () => {
     <>
       <Header />
       <Expertise />
-      {/* <WhyChooseUs /> */}
+      <WhyChooseUs />
       <Footer />
     </>
   );
