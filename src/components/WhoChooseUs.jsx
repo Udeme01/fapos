@@ -1,4 +1,4 @@
-import React from 'react'
+import { WHY_CHOOOSE_US } from "../data/whychooseus"
 
 const WhoChooseUs = () => {
   return (
@@ -18,24 +18,15 @@ const WhoChooseUs = () => {
             </div>
         </section>
         <section>
-            <div className='bg-blue text-white mx-6 rounded-md text-center py-3 mb-6'>
-                <h2 className='font-bold text-2xl mb-2'>15+</h2>
-                <p className='text-xs font-medium'>
-                    Years Experience
-                </p>
-            </div>
-            <div className='bg-blue text-white mx-6 rounded-md text-center py-3 mb-6'>
-                <h2 className='font-bold text-2xl mb-2'>200+</h2>
-                <p className='text-xs font-medium'>
-                    Projects Completed
-                </p>
-            </div>
-            <div className='bg-blue text-white mx-6 rounded-md text-center py-3 mb-6'>
-                <h2 className='font-bold text-2xl mb-2'>100%</h2>
-                <p className='text-xs font-medium'>
-                    Client Satisfaction
-                </p>
-            </div>
+            {WHY_CHOOOSE_US.map((data) => {
+                const {numbers, text} = data
+                return (
+                    <div key={numbers} className='bg-blue text-white mx-6 rounded-md text-center py-3 mb-6'>
+                        <h2 className='font-bold text-2xl mb-2 text-yellow'>{numbers}</h2>
+                        <p className='text-xs font-medium text-yellow'>{text}</p>
+                    </div>
+                )
+            })}
         </section>
     </section>
   )

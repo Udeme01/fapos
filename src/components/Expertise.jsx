@@ -1,5 +1,6 @@
 import React from "react";
-import {TentTree, Omega, TriangleRight, GraduationCap} from 'lucide-react'
+import { TentTree, Omega, TriangleRight, GraduationCap } from "lucide-react";
+import { EXPERTISE } from "../data/expertise";
 
 const Expertise = () => {
   return (
@@ -11,34 +12,23 @@ const Expertise = () => {
           delivering high-quality solutions for our clients.
         </p>
       </section>
-      <section className="mt-12 w-full h-80 flex flex-col items-center justify-end px-8 pb-12">
-        <TentTree size='90px' color='#ffc700' className='mb-8' />
-        <h2 className="text-lg text-blue font-bold mb-3">Site Investigation</h2>
-        <p>
-          Comprehensive geological and geotechnical analysis to assess soil
-          conditions, stability, and suitablity for construction projects.
-        </p>
-      </section>
-      <section className="mt-12 w-full h-80 flex flex-col items-center justify-end px-8 pb-12">
-        <Omega size='90px' color='#ffc700' className='mb-8' />
-        <h2 className="text-lg text-blue font-bold mb-3">Foundation Engineering</h2>
-        <p>
-          Expert foundation design and engineering solution tailored to your specific soil condition and structural requirements.
-        </p>
-      </section>
-      <section className="mt-12 w-full h-80 flex flex-col items-center justify-end px-8 pb-12">
-        <TriangleRight size='90px' color='#ffc700' className='mb-8' />
-        <h2 className="text-lg text-blue font-bold mb-3">Slope Stability Analysis</h2>
-        <p>
-         Professonal assessment and solution for slope stability issues, ensuring safety and preventing potential hazards.
-        </p>
-      </section>
-      <section className="mt-12 w-full h-80 flex flex-col items-center justify-end px-8 pb-12">
-        <GraduationCap size='90px' color='#ffc700' className='mb-8' />
-        <h2 className="text-lg text-blue font-bold mb-3">Education & Training</h2>
-        <p>
-         Educational workshops and consulting on paper construction practices, land evaluation, and forward-thinking investment strategies.
-        </p>
+
+      <section>
+        {EXPERTISE.map((expertise) => {
+          const {image, title, description} = expertise
+          const Icon = image
+          return (
+            <section key={title} className="mt-12 w-full h-80 flex flex-col items-center justify-end px-8 pb-12">
+              <Icon size="90px" color="#ffc700" className="mb-8" />
+              <h2 className="text-lg text-blue font-bold mb-3">
+                {title}
+              </h2>
+              <p className="text-center">
+                {description}
+              </p>
+            </section>
+          );
+        })}
       </section>
     </section>
   );
